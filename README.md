@@ -506,7 +506,7 @@ except Exception as e:
 
 ![image](https://user-images.githubusercontent.com/74982150/155870981-8567f4e5-61fe-419d-ba3b-c550f0a16c32.png)
 
-Puedes encontrar mucho más de cómo utilizar este script en [ARCHIVO ESTÁTICO A MYSQL](https://github.com/tu/proyecto/wiki)
+Puedes encontrar mucho más de cómo utilizar este script en [ARCHIVO ESTÁTICO A MYSQL](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/08_Datos%20abiertos%20to%20MySQL/Import_csv_to_mysql.ipynb)
 
 ---
 
@@ -622,7 +622,7 @@ Output exceeds the size limit. Open the full output data in a text editor
  ...]
 ```
 
-Puedes encontrar mucho más de cómo utilizar este script en nuestra [MYSQL A MONGODB-ATLAS](https://github.com/tu/proyecto/wiki)
+Puedes encontrar mucho más de cómo utilizar este script en nuestra [MYSQL A MONGODB-ATLAS](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/08_Datos%20abiertos%20to%20MySQL/MySQL_to_MongoDB.ipynb)
 
 --- 
 
