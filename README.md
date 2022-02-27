@@ -17,6 +17,10 @@ El equipo de trabajo para el proyecto denominado data lake el cual tiene como ob
 
 ![image](https://user-images.githubusercontent.com/74844624/155891550-57279e29-faa4-44f5-97f7-dff2f2e23824.png)
 
+## Video de Youtube 📌
+
+En el siguiente enlace se podra visualizar todos los procedimiento que se realizo [Video](https://www.youtube.com/watch?v=yWNPFupdo_Q)
+
 ---
 ## Content 🚀
 - [Pre-requisitos](#Pre-requisitos)
@@ -1002,11 +1006,6 @@ En conclusión las personas tienden a desaparecer por motivos financieros, probl
 ![image](https://user-images.githubusercontent.com/74982150/155871191-548461b8-edb3-4390-a87b-9b2a0416b285.png)
 
 ![image](https://user-images.githubusercontent.com/74982150/155871199-de41546a-ac27-49db-95d5-a4ef4de24128.png)
-
-
-## Video de Youtube 📌
-
-En el siguiente enlace se podra visualizar todos los procedimiento que se realizo [Video](https://www.youtube.com/watch?v=yWNPFupdo_Q)
 
 
 
