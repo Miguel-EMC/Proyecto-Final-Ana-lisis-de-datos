@@ -1,6 +1,6 @@
 # Proyecto final análisis de datos
 
-## Autores ✒️
+### Autores ✒️
 
 _Todos los colaboradores del proyecto desde sus inicios son:_
 
