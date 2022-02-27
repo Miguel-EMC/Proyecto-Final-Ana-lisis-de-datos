@@ -4,7 +4,7 @@
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Dustin Chávez** - [villanuevand](https://github.com/Dustinouwu)
+* - [Dustin Chávez](https://github.com/Dustinouwu)
 * **Steven Guañuna** - [villanuevand](https://github.com/Dustinouwu)
 * **Miguel Muzo** - [villanuevand](https://github.com/Dustinouwu)
 * **Kevin Pinanjota** - [villanuevand](https://github.com/Dustinouwu)
