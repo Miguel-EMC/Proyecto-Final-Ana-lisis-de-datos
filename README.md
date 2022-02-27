@@ -11,14 +11,14 @@ El equipo de trabajo para el proyecto denominado data lake el cual tiene como ob
 	- [Bases NO SQL](#Bases-NO-SQL)
 	- [Fuentes de internet](#Fuentes-de-internet)
 	- [Otras](#Otras)
-- [Twitter To CouchDB](#features)
-- [Webscraping to Neo4j](#to-do)
-- [Facebook to CouchDB](#contribution)
-- [Twitter to MongoDB](#installation)
-- [Kaggle to MySQL](#usage)
-- [INEC to SQL Server](#usage)
-- [WebScraping to PostgreSQL](#usage)
-- [Datos abiertos to MySQL](#usage)
+- [Twitter to CouchDB](#Twitter-to-CouchDB)
+- [Webscraping to Neo4j](#Webscraping-to-Neo4j)
+- [Facebook to CouchDB](#cFacebook-to-CouchDB)
+- [Twitter to MongoDB](#Twitter-to-MongoDB)
+- [Kaggle to MySQL](#Kaggle-to-MySQL)
+- [INEC to SQL Server](#INEC-to-SQL-Server)
+- [WebScraping to PostgreSQL](#WebScraping-to-PostgreSQL)
+- [Datos abiertos to MySQL](#Datos-abiertos-to-MySQL)
 
 
 ## Pre-requisitos 📋
