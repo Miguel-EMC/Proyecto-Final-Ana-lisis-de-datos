@@ -115,8 +115,8 @@ Extraeremos el archivo estático desde la página del gobierno “DATOS ABIERTOS
 
 ![image](https://user-images.githubusercontent.com/74982150/155870656-476c702c-dd07-4462-831d-73d24416778a.png)
 
----
-### Procedimiento
+- Procedimiento
+
 Importaremos algunas librerías para poder realizar tanto la conexión para la base de datos MYSQL y poder leer el archivo que vamos a extraer de las páginas de archivos estáticos.
 
 ```py
