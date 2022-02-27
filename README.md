@@ -49,11 +49,9 @@ _Para poder desarrollar el proyecto es necesario instalar las bases de datos y u
 ## Otras:  
 - Pycharm: Es un entorno de desarrollo integrado utilizado en la programación de computadoras, específicamente para el lenguaje Python. Está desarrollado por la empresa checa JetBrains. 
 - PowerBI: Servicio de análisis de datos desarrollada por Microsoft, creado con la intención de proporcionar visualizaciones que logren ser interactivas y con capacidades de inteligencia empresarial. 
-```
-Da un ejemplo
-```
 
-### Instalación 🔧
+
+### Twitter To CouchDB
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
@@ -71,11 +69,15 @@ hasta finalizar
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
-## Ejecutando las pruebas ⚙️
+### Webscraping to Neo4j
+
+```
+Da un ejemplo
+```
 
 _Explica como ejecutar las pruebas automatizadas para este sistema_
 
-### Analice las pruebas end-to-end 🔩
+### Facebook to CouchDB
 
 _Explica que verifican estas pruebas y por qué_
 
@@ -83,7 +85,7 @@ _Explica que verifican estas pruebas y por qué_
 Da un ejemplo
 ```
 
-### Y las pruebas de estilo de codificación ⌨️
+### Twitter to MongoDB
 
 _Explica que verifican estas pruebas y por qué_
 
@@ -91,11 +93,11 @@ _Explica que verifican estas pruebas y por qué_
 Da un ejemplo
 ```
 
-## Despliegue 📦
+### Kaggle to MySQL
 
 _Agrega notas adicionales sobre como hacer deploy_
 
-## Construido con 🛠️
+### INEC to SQL Server
 
 _Menciona las herramientas que utilizaste para crear tu proyecto_
 
@@ -103,11 +105,11 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-## Contribuyendo 🖇️
+### WebScraping to PostgreSQL
 
 Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-## Wiki 📖
+### Datos abiertos to MySQL
 
 Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
 
