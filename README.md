@@ -107,8 +107,145 @@ Da un ejemplo
 ```
 
 ## Kaggle to MySQL
+Lo primero es descargar un documento csv o json de la pagina de [kaggle](https://www.kaggle.com/)
 
-_Agrega notas adicionales sobre como hacer deploy_
+![image](https://user-images.githubusercontent.com/74844624/155894152-63cbab26-e378-4a5d-9d99-6c175e5c639f.png)
+
+- Procedimiento
+
+Para poder cargar un archivo a MySQL se debe importar las librería de mysql.connnecto ya que esto nos va a permitir conectarnos con el servidor, además se deberá importar panadas para poder realizar la lectura al archivo csv.
+
+```py
+import mysql.connector as msql
+import pandas as pd
+from sqlalchemy import create_engine
+```
+
+Para realizar la conecxion se debe crear una variable con el nombre de ‘conections’ el cual debe conetener los datos de nuestro servidor y comprobamos si se realiza una conexión exitosa ya sea con if- else o con try – except.
+
+
+```py
+connections = msql.connect(
+    host = 'localhost',
+    user = 'miguel',
+    password = 'miguel'
+)
+if connections.is_connected():
+    cursor = connections.cursor()
+    print("Conexion con exito")
+else:
+    print("Error")
+```
+
+Con la variable cursor.execute se podrá crear una base de datos con los comandos que se utiliza en MySQL, después se crea un engine para realizar una conexión directa a al base de datos y finalmente se deberá leer el archivo de formato csv.
+
+```py
+cursor.execute("CREATE DATABASE articles")
+```
+
+```py
+engine = create_engine("mysql+mysqldb://miguel:miguel@localhost:3306/articles")
+```
+
+```py
+dftosql = pd.read_csv("articles_data.csv", sep=',', encoding='UTF-8')
+```
+
+Para enviar el documento se debe crear una colección de con cualquier nombre y eso debe estar en un try para poder comprobar si la conexión se realiza con éxito o no.
+
+```py
+try:
+    dftosql.to_sql('scraping',con=engine, if_exists='replace', index=False)
+    print("Alamacenado con exito")
+except Exception as ex:
+    print(ex)
+```
+
+Puedes encontrar mucho más de cómo utilizar este script en [Arhivo csv to MYSQL](https://github.com/tu/proyecto/wiki)
+
+---
+### Migración de MySQL To MongoDB
+
+En la migración de MySQL a mongo lo primero es importar varias librear para poder ayudar a realizar la conexión, lo primero es importar pymongo y sqlite3 , después se importara pandas para que pueda ayudar a visualizar los datos que se quieren enviar.
+
+```py
+import sqlite3 as sq
+import pandas as pd
+import json
+from pymongo import MongoClient
+import mysql.connector
+```
+
+Lo primero es conectar con el servidor de MySQL, para eso se creará una variable en el cual debe encontrarse todos los datos del servidor, y también se debe incluir la base de datos a la cual queremos migrar. 
+
+```py
+mydb = mysql.connector.connect(
+    host = "localhost",
+    user = "miguel",
+    password = "miguel",
+    database = "articles"
+)
+```
+
+Es importante crear un cursor para conectar directamente con la colección de la base de datos, para esto se debe utilizar el lenguaje de MySQL.
+
+```py
+mycursor = mydb.cursor()
+mysql = "SELECT * FROM scraping"
+mycursor.execute(mysql)
+myresult = mycursor.fetchall()
+)
+```
+
+También se debe conectar con el servidor de MongoDB, ya puede ser directamente con el url de mongo ATLAS o con los datos de mongoCompass y después se debe crear una variable en el cual se debe incluir el nombre de la base de datos que se va a crear en MongoDB y con un db vamos a conectar las dos bases de datos.
+
+```py
+client = MongoClient("mongodb+srv://miguel:miguel@cluster0.ed8kj.mongodb.net/test")
+
+DBS = client.get_database('articles')
+db = DBS.MySql
+```
+
+Mediante un for se va ir creando el nombre de las tablas que tiene nuestra base de datos en MySQL y mediante un try – except se comprueba si la migración fue realizada con éxito o si existió fallos.
+
+```py
+for row in myresult:
+    doc={} 
+    doc['id']=row[0]
+    doc['source_id'] =row[1]
+    doc['source_name'] = row[2]
+    doc['author']=row[3]
+    doc['title'] = row[4]
+    doc['description'] =  row[5]
+    doc['url'] = row[6]
+    doc['url_to_image'] = row[7]
+    doc['published_at'] = row[8]
+    doc['content'] = row[9]
+    doc['top_article'] = row[10]
+    doc['engagement_reaction_count'] = row[11]
+    doc['engagement_comment_count'] = row[12]
+    doc['engagement_share_count'] = row[13]
+    doc['engagement_comment_plugin_count'] = row[14]
+
+    try:
+       print(doc)
+       db.insert_one(doc)
+       print("Migracion exitosa")
+    except Exception as ex:
+        print(ex)
+```
+
+Puedes encontrar mucho más de cómo utilizar este script en [MYSQL to MongoDB Atlas](https://github.com/tu/proyecto/wiki)
+
+---
+
+### Analisis 
+
+En un análisis de las publicaciones que se realizaron durante un año en EEUU las realizo abc-news la cual tiene una cantidad sumamente grande, de igual manera es la que tiene una mayoría de aceptación por las personas, la segunda es al-jazeera-english la que es una segunda publicación, son las dos que tienen publicaciones las que tienen publicaciones que se han encontrado en un top durante todo el año.
+ 
+
+![image](https://user-images.githubusercontent.com/74844624/155894474-9317c31d-d027-46ed-a770-9de9898c3304.png)
+
 
 ## INEC to SQL Server
 
