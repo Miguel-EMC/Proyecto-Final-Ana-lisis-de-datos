@@ -15,12 +15,10 @@ El equipo de trabajo para el proyecto denominado data lake el cual tiene como ob
 - [WebScraping to PostgreSQL](#usage)
 - [Datos abiertos to MySQL](#usage)
 
-Mira **Deployment** para conocer como desplegar el proyecto.
-
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Para poder desarrollar el proyecto es necesario instalar las bases de datos y un ID en donde se vaya a ejecutar el script realizado en python_
 
 ```
 Da un ejemplo
