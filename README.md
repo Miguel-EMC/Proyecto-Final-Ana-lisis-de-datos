@@ -32,7 +32,7 @@ El equipo de trabajo para el proyecto denominado data lake el cual tiene como ob
 - [INEC to SQL Server](#INEC-to-SQL-Server)
 - [WebScraping to PostgreSQL](#WebScraping-to-PostgreSQL)
 - [Datos abiertos to MySQL](#Datos-abiertos-to-MySQL)
-
+- [Link del Video en Youtube](#Link-del-Video-en-Youtube)
 
 ## Pre-requisitos 📋
 
@@ -647,8 +647,5 @@ En conclusión las personas tienden a desaparecer por motivos financieros, probl
 
 En el siguiente enlace se podra visualizar todos los procedimiento que se realizo [SemVer](http://semver.org/)
 
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 
