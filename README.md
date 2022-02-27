@@ -79,6 +79,8 @@ _Para poder desarrollar el proyecto es necesario instalar las bases de datos y u
 
 ## Webscraping to Neo4j
 
+---
+
 * [Importar un archivo CSV a Neo4j]()
 * [Envio de datos hacia MongoDB]()
 * [Analisis PowerBI]()
@@ -235,6 +237,8 @@ Puedes encontrar mucho más de cómo utilizar este script en [Importar un archiv
 
 ### Envio de datos hacia MongoDB
 
+---
+
 - Importar las librerías necesarias para establecer la conexión con Mongo DB y otras para enviar los datos 
 ```py
 from bs4 import BeautifulSoup
@@ -306,6 +310,9 @@ Puedes encontrar mucho más de cómo utilizar este script en [Envio de datos hac
 ---
 
 ### Analisis
+
+---
+
 -	Para el analisis se utiliza la herrmienta Power  Bi que nos permite realizar graficos dependiendo del tipo de datos que deseemos analizar. Para este ejemplo vamos a analizar las estadisticas de cada pokemon, realizando graficos que relacionen el nombre, tipo y todas las estadisticas. Utilizando diferentes filtros como por categoria, por rango o por tipo se puede obtener muchas conclusiones, desde cual es el atributo mas fuerte de una clase en especifico, hasta una comparacion entre todos los atributos mediante un grafico de barras entre los pokemons escogidos.
 ![image](https://user-images.githubusercontent.com/74793607/155897802-2d9c6a10-128a-4bea-9938-ea98c202b9e8.png)
 
@@ -319,8 +326,11 @@ El atributo mas alto de los pokemons que tienen un total (sumatoria de todas las
 **Emboar, Salud = 110**
 ![image](https://user-images.githubusercontent.com/74793607/155898890-c357ab99-7ae0-44f6-91b0-4be66dafde02.png)
 
+---
 
 ## Facebook to CouchDB
+
+---
 
 * [Importar un archivo CSV a CouchDB]()
 * [Migrar un database en CouchDB a MongoDB Atlas]()
@@ -332,8 +342,11 @@ _Explica que verifican estas pruebas y por qué_
 Da un ejemplo
 ```
 
+---
+
 ## Twitter to MongoDB
 
+---
 * [Importar un archivo CSV a MongoDB]()
 * [Analisis PowerBI]()
 
@@ -342,8 +355,11 @@ _Explica que verifican estas pruebas y por qué_
 ```
 Da un ejemplo
 ```
+---
 
 ## Kaggle to MySQL
+
+---
 
 * [Importar un archivo CSV a MySQL]()
 * [Migrar un database en MySQL a MongoDB Atlas]()
@@ -406,7 +422,10 @@ except Exception as ex:
 Puedes encontrar mucho más de cómo utilizar este script en [Arhivo csv to MYSQL](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/05_Kaggle%20to%20MySQL/MYSQL.ipynb)
 
 ---
+
 ### Migración de MySQL To MongoDB
+
+---
 
 En la migración de MySQL a mongo lo primero es importar varias librear para poder ayudar a realizar la conexión, lo primero es importar pymongo y sqlite3 , después se importara pandas para que pueda ayudar a visualizar los datos que se quieren enviar.
 
@@ -483,13 +502,18 @@ Puedes encontrar mucho más de cómo utilizar este script en [MYSQL to MongoDB A
 
 ### Analisis 
 
+---
+
 En un análisis de las publicaciones que se realizaron durante un año en EEUU las realizo abc-news la cual tiene una cantidad sumamente grande, de igual manera es la que tiene una mayoría de aceptación por las personas, la segunda es al-jazeera-english la que es una segunda publicación, son las dos que tienen publicaciones las que tienen publicaciones que se han encontrado en un top durante todo el año.
  
 
 ![image](https://user-images.githubusercontent.com/74844624/155894474-9317c31d-d027-46ed-a770-9de9898c3304.png)
 
+---
 
 ## INEC to SQL Server
+
+---
 
 * [Importar un archivo CSV a SQL server](CSV-a-SQL-server)
 * [Migrar un database en SQL server a MongoDB Atlas](SQL-server-a-MongoDB-Atlas)
@@ -581,6 +605,8 @@ Puedes encontrar mucho más de cómo utilizar este script en [CSV-a-SQL-server](
 
 ### SQL-server-a-MongoDB-Atlas
 
+---
+
 Para realizar una migracion de una base de datos de SQL-SERVER a MongoDB Atlas se debe importar las siguientes librerias las cual nos va a poder ayudar a conectar con los servidores. 
 
 ```py
@@ -640,15 +666,21 @@ for row in myresult:
 ```
 Puedes encontrar mucho más de cómo utilizar este script en [SQL-server-a-MongoDB-Atlas](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/06_INEC%20to%20SQL%20Server/SQL_SERVER_TO_MONGO.ipynb)
 
+---
 
 ### Analisis PowerBI
+
+---
 
 En el análisis de datos sobre los estudiantes de bachilleratos registrados en el periodo 2012 – 2013, se ha podido determinar que la mayoría de los estudiantes son de la provincia del Guayas donde también existe la mayoría de la población en la provincia, después le sigue la provincia de pichincha y donde existe una menor cantidad de estudiantes de igual manera son en las provincias menos pobladas que lo es galápagos y las provincias de la amazonia.
 
 ![image](https://user-images.githubusercontent.com/74844624/155896381-e63a4613-5db6-44f3-8685-680e32e5dc3c.png)
 
+---
 
 ## WebScraping to PostgreSQL
+
+---
 
 * [Importar un archivo CSV a PostgreSQL]()
 * [Migrar un database en PostgreSQL a MongoDB Atlas]()
@@ -744,8 +776,12 @@ conn.close()
 
 Puedes encontrar mucho más de cómo utilizar este script en [Web Scraping (Noticias) a PostgreSQL (Base SQL)](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/07_WebScraping%20to%20PostgreSQL/NoticiasScraping.ipynb)
 
+---
 
 ### Envio de datos hacia MongoDB
+
+---
+
 - Importar las librerías para establecer una conexión tanto con PostgreSQL y MongoDB`
 
 ```py
@@ -803,8 +839,11 @@ Puedes encontrar mucho más de cómo utilizar este script en [Envio de datos hac
 - En el siguiente ejemplo se puede observar como mediante un filtro de palabras y fuente  se puede visualizar las noticias que cumplan con todos estos filtros que hemnos establecido, Ademas que el grafico inferior se pueden observar las palabras que mas se repiten.
 ![image](https://user-images.githubusercontent.com/74793607/155899777-6677dce3-e7a8-4a73-9b4a-ef476bb7b708.png)
 
+---
 
 ## Datos abiertos to MySQL
+
+---
 
 * [Importar un archivo CSV a MySQL]()
 * [Migrar un database en MySQL a MongoDB Atlas]()
@@ -881,6 +920,8 @@ Puedes encontrar mucho más de cómo utilizar este script en [ARCHIVO ESTÁTICO 
 ---
 
 ### MYSQL A MONGODB-ATLAS
+
+---
 
 Utilizaremos las siguientes librerías para poder realizar esta transición entre base de datos.
 
@@ -997,6 +1038,9 @@ Puedes encontrar mucho más de cómo utilizar este script en nuestra [MYSQL A MO
 --- 
 
 ### ANÁLISIS EN POWERBI
+
+---
+
 Se realizó en el análisis del tema seleccionado “personas desaparecidas”, analizando primero la cantidad de personas desaparecidas por provincia, destacando en ella que las principales provincias que tienen un mayor número de casos son las del Guayas y Pichincha, esto se debe a que son provincias muy pobladas y por ende el número siempre va a ser alto a diferencia de otras provincias, otro punto a destacar es la provincia de Galápagos, que al ser una zona netamente turística tiene un gran control por lo no tiene mucha probabilidad de que una persona se pierda.
 
 ![image](https://user-images.githubusercontent.com/74982150/155871162-bdef92bf-0fd5-44d4-9056-879fb6ccecab.png)
