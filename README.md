@@ -659,7 +659,155 @@ En el análisis de datos sobre los estudiantes de bachilleratos registrados en e
 * [Migrar un database en PostgreSQL a MongoDB Atlas]()
 * [Analisis PowerBI]()
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+- Importar las librerías necesarias para establecer una conexión con la base PostgreSQL y las librerías de BeautifulSoup para extraer los datos de una pagina web
+```py
+##Librerias
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+import psycopg2
+```
+- Establecer la conexión con la base de datos con sus resectivas credenciales 
+```py
+###Conexion####
+conn = psycopg2.connect(host="localhost", database="webscraping", user="postgres", password="1234", port="5432")
+conn.autocommit = True 
+cur = conn.cursor()
+```
+- Mediante una instruccion sql enviamos un query que cree la table Noticias_Scraping con sus respectivos atributos
+```py
+##Query
+cur.execute('''CREATE TABLE Noticias_Scraping(N_Id int NOT NULL,\
+Titulo text,\
+Descripcion text,\
+Autor varchar(50),Fuente varchar(50), Fecha varchar(50));''')
+conn.commit()
+```
+- Inicializar variables que se usaran mas adelante
+```py
+i=1
+count = 2
+tablelist=[]
+url='https://www.bbc.com/mundo/topics/c2lej05epw5t'
+```
+- Con el while se puede definar cuantas paginas se desea extraer , ademas de buscar las debidas etiquetas en el código html ara poder extraer todos los datos deseados. Existen condicionales if que verifican que esa etiqueta tenga texto, caso contrario establecerá su variable como nulo
+```py
+while count <=50 :
+    req = requests.get(url)
+    soup = BeautifulSoup(req.text, 'html.parser')
+    league = soup.find('ol',class_ = 'gs-u-m0 gs-u-p0 lx-stream__feed qa-stream')
+    for team in league.find_all('li', class_= 'lx-stream__post-container'):
+        num = team.find('a', class_ = 'qa-heading-link lx-stream-post__header-link').text.strip()
+        t = team.find('p', class_ = 'lx-stream-related-story--summary qa-story-summary')
+        if t is not None:
+            nombre= t.text.strip()
+        else:
+            nombre =None
+        t2 = team.find('p', class_ = 'qa-contributor-name lx-stream-post__contributor-name gel-long-primer gs-u-m0')
+        if t2 is not None:
+            Tipo = t2.text.strip()
+        else:
+            Tipo = None
+        t3 = team.find('p', class_ = 'qa-contributor-role lx-stream-post__contributor-description gel-brevier gs-u-m0')
+        if t3 is not None:
+            fuente=t3.text.strip()
+        else :
+            fuente = None
+        t4 = team.find('span', class_ = 'gs-u-vh qa-visually-hidden-meta')
+        if t4 is not None:
+            fecha=t4.text.strip()
+        else:
+            fecha = None
+```
+- Se envían los datos mediante una instrucción query con los respectivos valores extraídos en el paso anterior
+```py
+        cur.execute("INSERT INTO Noticias_Scraping VALUES (%s,%s,%s,%s,%s,%s)",(i,num,nombre,Tipo,fuente,fecha))
+```
+- Se crea un archivo formato json para almacenar los datos y posterior a eso enviar estos datos a una lista para que mediante la librería pandas se pueda crear un data frame y por consecuente un archivo csv. Por ultimo cerramos la conexión con la base de datos
+
+```py
+        json ={
+            "Titulo": num,
+            "Descripcion": nombre,
+            "Autor": Tipo,
+            "Fuente": fuente,
+            "Fecha": fecha
+        }
+        tablelist.append(json)
+        i+=1
+    subS = 'https://www.bbc.com/mundo/topics/c2lej05epw5t/page/'+ str(count)
+    url = subS
+    count+=1
+
+df= pd.DataFrame(tablelist)
+df.to_csv('Noticias.csv')
+   
+conn.close()
+```
+- Verificamos que los datos se hayan enviado correctamente hacia PostreSQL
+![image](https://user-images.githubusercontent.com/74793607/155899278-5fc1bbcd-e4b7-4e5b-b46f-cf6add6abf67.png)
+
+Puedes encontrar mucho más de cómo utilizar este script en [Web Scraping (Noticias) a PostgreSQL (Base SQL)]()
+
+
+### Envio de datos hacia MongoDB
+- Importar las librerías para establecer una conexión tanto con PostgreSQL y MongoDB`
+
+```py
+import psycopg2
+import pymongo
+from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure
+```
+- Establecer conexión con la base de datos MongoDB con las respectivas credenciales
+```py
+cliente = MongoClient('localhost',27017)
+db = cliente["Noticias"]
+Noticias = db.noticias
+```
+- Establecer conexión con la base de datos PostgreSQL con las respectivas credenciales 
+```py
+conn = psycopg2.connect(host="localhost", database="webscraping", user="postgres", password="1234", port="5432")
+cur = conn.cursor()
+```
+- Con una instrucción SQL extraemos todos los datos de la base de datos PostgreSQL
+```py
+Query = "Select * from noticias_scraping "
+cur.execute(Query)
+```
+- Con la función .fetchall() organizamos todos los datos estableciendo sus cabezeras para que estos se puedan exportar de una manera adecuada a la base de datos MongoDB
+```py
+scraping= cur.fetchall()
+```
+- Con el uso de un for guardamos todos los datos en archivo tipo json con sus respectivas cabeceras.
+```py
+for row in scraping:
+    teamingLeague = [{
+        "Id" : row[0],
+        "Titulo" : row [1],
+        "Descripcion" : row[2],
+        "Autor" : row[3],
+        "Fuente" : row[4],
+        "Fecha" : row[5]
+    }]
+```
+- Se envían los datos recopilados a la base de datos mongoDB y por ultimo cerramos la conexión con la base de datos PostgreSQL
+```py
+    Noticias.insert_many(teamingLeague)
+conn.close()
+```
+- Se comprueba que los datos se hayan enviado correctamente hacia MongoDB
+![image](https://user-images.githubusercontent.com/74793607/155899480-3751e588-ddbe-494c-80b5-d1754c9e23fb.png)
+
+Puedes encontrar mucho más de cómo utilizar este script en [Envio de datos hacia MongoDB]()
+
+### Analisis 
+- Para el analisis  del dataset extraido mediante webscraping se utiliza herramientas que solo se relacionen con texto, ya que como el tema principal son noticias, es muy dificil poder ponderar estos datos y convertirlos en graficos estadisticos.
+![image](https://user-images.githubusercontent.com/74793607/155899661-3e63dad8-e69f-4577-abc2-a9be8d27b290.png)
+
+- En el siguiente ejemplo se puede observar como mediante un filtro de palabras y fuente  se puede visualizar las noticias que cumplan con todos estos filtros que hemnos establecido, Ademas que el grafico inferior se pueden observar las palabras que mas se repiten.
+![image](https://user-images.githubusercontent.com/74793607/155899777-6677dce3-e7a8-4a73-9b4a-ef476bb7b708.png)
+
 
 ## Datos abiertos to MySQL
 
