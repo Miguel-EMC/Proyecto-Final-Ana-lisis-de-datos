@@ -7,7 +7,7 @@ El equipo de trabajo para el proyecto denominado data lake el cual tiene como ob
 ---
 ## Content 🚀
 - [Pre-requisitos](#Pre-requisitos)
-	- [Bases SQL](#bases sql)
+	- [Bases SQL](#bases-sql)
 	    - [Terminal Examples](https://github.com/drawrowfly/tiktok-scraper/tree/master/examples/CLI/Examples.md)
 	    - [Manage Download History](https://github.com/drawrowfly/tiktok-scraper/tree/master/examples/CLI/DownloadHistory.md)
 	    - [Scrape and Download in Batch](https://github.com/drawrowfly/tiktok-scraper/tree/master/examples/CLI/BatchDownload.md)
