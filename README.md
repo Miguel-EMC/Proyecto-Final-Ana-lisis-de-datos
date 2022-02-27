@@ -1,5 +1,16 @@
 # Proyecto final análisis de datos
 
+## Autores ✒️
+
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+
+* **Dustin Chávez** - [villanuevand](https://github.com/Dustinouwu)
+* **Steven Guañuna** - [villanuevand](https://github.com/Dustinouwu)
+* **Miguel Muzo** - [villanuevand](https://github.com/Dustinouwu)
+* **Kevin Pinanjota** - [villanuevand](https://github.com/Dustinouwu)
+
+--- 
+
 El equipo de trabajo para el proyecto denominado data lake el cual tiene como objetivo la recolección de datos y evaluación para poder determinar varias conclusiones.
 
 ![image](https://user-images.githubusercontent.com/74844624/155891550-57279e29-faa4-44f5-97f7-dff2f2e23824.png)
@@ -275,14 +286,6 @@ En conclusión las personas tienden a desaparecer por motivos financieros, probl
 
 Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
 
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
 
