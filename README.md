@@ -643,24 +643,12 @@ En conclusión las personas tienden a desaparecer por motivos financieros, probl
 ![image](https://user-images.githubusercontent.com/74982150/155871199-de41546a-ac27-49db-95d5-a4ef4de24128.png)
 
 
-## Versionado 📌
+## Link del Video en Youtube 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
+En el siguiente enlace se podra visualizar todos los procedimiento que se realizo [SemVer](http://semver.org/)
 
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
-
-
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
 
