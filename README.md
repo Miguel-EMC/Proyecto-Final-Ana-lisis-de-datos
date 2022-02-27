@@ -11,6 +11,8 @@ _Todos los colaboradores del proyecto desde sus inicios son:_
 
 --- 
 
+### Descripción 📄
+
 El equipo de trabajo para el proyecto denominado data lake el cual tiene como objetivo la recolección de datos y evaluación para poder determinar varias conclusiones.
 
 ![image](https://user-images.githubusercontent.com/74844624/155891550-57279e29-faa4-44f5-97f7-dff2f2e23824.png)
