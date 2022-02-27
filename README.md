@@ -21,11 +21,11 @@ El equipo de trabajo para el proyecto denominado data lake el cual tiene como ob
 - [Datos abiertos to MySQL](#usage)
 
 
-### Pre-requisitos 📋
+## Pre-requisitos 📋
 
 _Para poder desarrollar el proyecto es necesario instalar las bases de datos y un ID en donde se vaya a ejecutar el script realizado en python_
 
-## Bases SQL 
+### Bases SQL 
 
 - Mysql: Una de las bases de datos más utilizadas de código abierto, para entornos de desarrollo web.  
 
@@ -34,7 +34,7 @@ _Para poder desarrollar el proyecto es necesario instalar las bases de datos y u
 - Sql server: El lenguaje de desarrollo utilizado es Transact-SQL, una implementación del estándar ANSI del lenguaje SQL, utilizado para manipular y recuperar datos, tablas y definir relaciones entre ellas. 
 
 
- ## Bases NO SQL 
+ ### Bases NO SQL 
 
 - CouchDB: Gestor de base de datos cuyo foco está puesto en la facilidad de su uso y en ser “una base de datos que asume la web de manera completa”. 
 
@@ -43,15 +43,15 @@ _Para poder desarrollar el proyecto es necesario instalar las bases de datos y u
 - MongoDB: Es un sistema de base de datos orientado a documentos y a la vez de código abierto, también tiene distinta forma de guardar datos, especialmente guarda estructuras de datos BSON con un esquema dinámico. 
 
 - MongoDB – Atlas: Trata del mismo concepto que la base de datos MongoDB, pero con la gran diferencia que esta se encuentra en la nube, haciéndola más efectiva al momento de hacer trabajos con muchas personas. 
- ## Fuentes de internet:  
+ ### Fuentes de internet:  
 - Facebook: Red social creada con el propósito a mantener contacto con personas a largas o cortas distancias, compartiendo diferente contenido, ya sea audiovisual, información, etc. 
 - Twitter: Red social de microblogging, con un servicio de comunicación bidireccional con el que se puede llegar a compartir información de diverso tipo de forma rápida. 
-## Otras:  
+### Otras:  
 - Pycharm: Es un entorno de desarrollo integrado utilizado en la programación de computadoras, específicamente para el lenguaje Python. Está desarrollado por la empresa checa JetBrains. 
 - PowerBI: Servicio de análisis de datos desarrollada por Microsoft, creado con la intención de proporcionar visualizaciones que logren ser interactivas y con capacidades de inteligencia empresarial. 
 
 
-### Twitter To CouchDB
+## Twitter To CouchDB
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
@@ -69,7 +69,7 @@ hasta finalizar
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
-### Webscraping to Neo4j
+## Webscraping to Neo4j
 
 ```
 Da un ejemplo
@@ -77,7 +77,7 @@ Da un ejemplo
 
 _Explica como ejecutar las pruebas automatizadas para este sistema_
 
-### Facebook to CouchDB
+## Facebook to CouchDB
 
 _Explica que verifican estas pruebas y por qué_
 
@@ -85,7 +85,7 @@ _Explica que verifican estas pruebas y por qué_
 Da un ejemplo
 ```
 
-### Twitter to MongoDB
+## Twitter to MongoDB
 
 _Explica que verifican estas pruebas y por qué_
 
@@ -93,11 +93,11 @@ _Explica que verifican estas pruebas y por qué_
 Da un ejemplo
 ```
 
-### Kaggle to MySQL
+## Kaggle to MySQL
 
 _Agrega notas adicionales sobre como hacer deploy_
 
-### INEC to SQL Server
+## INEC to SQL Server
 
 _Menciona las herramientas que utilizaste para crear tu proyecto_
 
@@ -105,11 +105,11 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-### WebScraping to PostgreSQL
+## WebScraping to PostgreSQL
 
 Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-### Datos abiertos to MySQL
+## Datos abiertos to MySQL
 
 Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
 
