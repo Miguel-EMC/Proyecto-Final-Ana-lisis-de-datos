@@ -171,11 +171,87 @@ try:
 except Exception as e:
     print(e)
 ```
+
+Puedes encontrar mucho más de cómo utilizar este script en [ARCHIVO ESTÁTICO A MYSQL](https://github.com/tu/proyecto/wiki)
+
 ![image](https://user-images.githubusercontent.com/74982150/155870977-b0c469a5-9d8e-4f3b-a454-8634b177adf5.png)
 
 ![image](https://user-images.githubusercontent.com/74982150/155870981-8567f4e5-61fe-419d-ba3b-c550f0a16c32.png)
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+---
+
+### MYSQL A MONGODB-ATLAS
+
+Utilizaremos las siguientes librerías para poder realizar esta transición entre base de datos.
+
+```py
+from argparse import ArgumentParser
+from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure
+import mysql.connector as msql
+import pandas as pd
+from sqlalchemy import create_engine
+import certifi
+import numpy as np
+```
+
+Crearemos la conexión hacia MONGODB ya establecido como conectador de datos, añadiendo que en este caso se va a tratar de MONGODB -ATLAS, para esto utilizaremos el clouster en el MONGODB en la nube, comprobaremos el éxito de esta conexión, y adicionalmente crearemos el nombre de la base de datos y colección para MONGODB y guardándolos en distintas variables.
+
+```py
+try:
+    ca = certifi.where()
+    client = MongoClient('mongodb+srv://miguel:miguel@cluster0.ed8kj.mongodb.net/test', tlsCAFile=ca )
+
+    client.server_info()
+    print("Conexion exitosa")
+    client.close
+except pymongo.errors.ServerSelectionTimeoutError as errorTiempo:
+    print("Conexión rechazada")
+dbm = client['Mysql_to_Mongodb']
+cole = dbm['Datos_de_SQL']
+```
+
+Volveremos a establecer la conexión hacia MYSQL.
+
+```py
+engine = create_engine('mysql+mysqldb://root:123456casa@localhost:3306/PersonasPerdidas')
+```
+
+```py
+connections = msql.connect(host = 'localhost', user = 'root', password='123456', database ='PersonasPerdidas')
+if connections.is_connected():
+    cursor = connections.cursor()
+    cursor.execute("select database();")
+    record = cursor.fetchone()
+    print("Se conectó a la base de datos: ", record)
+```
+
+Crearemos el dataframe para poder pasar hacer la trasición de MYSQL hacia MONGODB, almacenaremos todo esto en una lista, para posteriormente mediante append para ir almacenando los múltiples datos y pasarlos hacia MONGODB-ATLAS.
+
+```py
+def createDocsFromDF(documento, collection = None, insertToDB=False):
+    docs = []
+    fields = [col for col in documento.columns]
+    for i in range(len(documento)):
+        doc = {col:documento[col][i] for col in documento.columns if col != 'index'}
+        for key, val in doc.items():
+            if type(val) == np.int64:
+                doc[key] = int(val)
+            if type(val) == np.float64:
+                doc[key] = float(val)
+            if type(val) == np.bool_:
+                doc[key] = bool(val)
+        docs.append(doc) 
+    if isinstance(docs, list): 
+        cole.insert_many(docs)   
+    else: 
+        cole.insert_one(docs)
+    print("guardado exitosamente")    
+    return docs 
+```
+
+Puedes encontrar mucho más de cómo utilizar este script en nuestra [MYSQL A MONGODB-ATLAS](https://github.com/tu/proyecto/wiki)
+
 
 ## Versionado 📌
 
