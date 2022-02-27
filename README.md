@@ -88,6 +88,10 @@ _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para 
 
 ## Webscraping to Neo4j
 
+* [Importar un archivo CSV a Neo4j]()
+* [Migrar un database en Neo4j a MongoDB Atlas]()
+* [Analisis PowerBI]()
+
 ```
 Da un ejemplo
 ```
@@ -95,6 +99,10 @@ Da un ejemplo
 _Explica como ejecutar las pruebas automatizadas para este sistema_
 
 ## Facebook to CouchDB
+
+* [Importar un archivo CSV a CouchDB]()
+* [Migrar un database en CouchDB a MongoDB Atlas]()
+* [Analisis PowerBI]()
 
 _Explica que verifican estas pruebas y por qué_
 
@@ -104,6 +112,9 @@ Da un ejemplo
 
 ## Twitter to MongoDB
 
+* [Importar un archivo CSV a MongoDB]()
+* [Analisis PowerBI]()
+
 _Explica que verifican estas pruebas y por qué_
 
 ```
@@ -111,6 +122,11 @@ Da un ejemplo
 ```
 
 ## Kaggle to MySQL
+
+* [Importar un archivo CSV a MySQL]()
+* [Migrar un database en MySQL a MongoDB Atlas]()
+* [Analisis PowerBI]()
+
 Lo primero es descargar un documento csv o json de la pagina de [kaggle](https://www.kaggle.com/)
 
 ![image](https://user-images.githubusercontent.com/74844624/155894152-63cbab26-e378-4a5d-9d99-6c175e5c639f.png)
@@ -412,9 +428,17 @@ En el análisis de datos sobre los estudiantes de bachilleratos registrados en e
 
 ## WebScraping to PostgreSQL
 
+* [Importar un archivo CSV a PostgreSQL]()
+* [Migrar un database en PostgreSQL a MongoDB Atlas]()
+* [Analisis PowerBI]()
+
 Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
 ## Datos abiertos to MySQL
+
+* [Importar un archivo CSV a MySQL]()
+* [Migrar un database en MySQL a MongoDB Atlas]()
+* [Analisis PowerBI]()
 
 Extraeremos el archivo estático desde la página del gobierno “DATOS ABIERTOS”, específicamente el tema de “personas perdidas”. 
 [Datos abiertos](https://datosabiertos.gob.ec/)
