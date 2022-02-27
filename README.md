@@ -124,6 +124,17 @@ import mysql.connector as msql
 import pandas as pd
 from sqlalchemy import create_engine
 ```
+
+Establecemos el nombre del host, el usuario y la contraseña de nuestro servidor de MYSQL, y posteriormente realizaremos esta conexión mediante un if, identificaremos si dicha conexión es exitosa o no, además de crear una variable para poder realizar las operaciones en lenguaje SQL en Python.
+
+```py
+connections = msql.connect(host = 'localhost', user = 'root', password='123456')
+if connections.is_connected():
+    cursor = connections.cursor()
+    print("Conexión Exitosa")
+else:
+    print("Conexión Rechazada")
+```
 Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
 
 ## Versionado 📌
