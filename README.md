@@ -70,21 +70,7 @@ _Para poder desarrollar el proyecto es necesario instalar las bases de datos y u
 * [Migrar un database en CouchDB a MongoDB Atlas]()
 * [Analisis PowerBI]()
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
 ## Webscraping to Neo4j
 
@@ -238,7 +224,7 @@ df.to_csv('Tema Libre.csv')
 - Se comprueba todos los datos subidos a neo4j mediante la propia herramienta que proporciona neo4j.
 ![image](https://user-images.githubusercontent.com/74793607/155897825-7aa603e3-77fa-41be-b5fd-e2c8a71beb65.png)
 
-Puedes encontrar mucho más de cómo utilizar este script en [Importar un archivo CSV a Neo4j]()
+Puedes encontrar mucho más de cómo utilizar este script en [Importar un archivo CSV a Neo4j](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/02_Webscraping%20to%20Neo4j/Temalibre.ipynb)
 
 ### Envio de datos hacia MongoDB
 
@@ -308,7 +294,7 @@ for team in league.find_all('tbody'):
 
 - Se comprueba que los datos fueron recopilados exitosamente en la base de datos MongoDB.
 - ![image](https://user-images.githubusercontent.com/74793607/155898531-9889e6a7-32a4-44d3-af6d-155e3d8c4c22.png)
-Puedes encontrar mucho más de cómo utilizar este script en [Envio de datos hacia MongoDB]()
+Puedes encontrar mucho más de cómo utilizar este script en [Envio de datos hacia MongoDB](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/02_Webscraping%20to%20Neo4j/Temalibre.ipynb)
 
 ### Analisis
 -	Para el analisis se utiliza la herrmienta Power  Bi que nos permite realizar graficos dependiendo del tipo de datos que deseemos analizar. Para este ejemplo vamos a analizar las estadisticas de cada pokemon, realizando graficos que relacionen el nombre, tipo y todas las estadisticas. Utilizando diferentes filtros como por categoria, por rango o por tipo se puede obtener muchas conclusiones, desde cual es el atributo mas fuerte de una clase en especifico, hasta una comparacion entre todos los atributos mediante un grafico de barras entre los pokemons escogidos.
@@ -747,7 +733,7 @@ conn.close()
 - Verificamos que los datos se hayan enviado correctamente hacia PostreSQL
 ![image](https://user-images.githubusercontent.com/74793607/155899278-5fc1bbcd-e4b7-4e5b-b46f-cf6add6abf67.png)
 
-Puedes encontrar mucho más de cómo utilizar este script en [Web Scraping (Noticias) a PostgreSQL (Base SQL)]()
+Puedes encontrar mucho más de cómo utilizar este script en [Web Scraping (Noticias) a PostgreSQL (Base SQL)](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/07_WebScraping%20to%20PostgreSQL/NoticiasScraping.ipynb)
 
 
 ### Envio de datos hacia MongoDB
@@ -799,9 +785,9 @@ conn.close()
 - Se comprueba que los datos se hayan enviado correctamente hacia MongoDB
 ![image](https://user-images.githubusercontent.com/74793607/155899480-3751e588-ddbe-494c-80b5-d1754c9e23fb.png)
 
-Puedes encontrar mucho más de cómo utilizar este script en [Envio de datos hacia MongoDB]()
+Puedes encontrar mucho más de cómo utilizar este script en [Envio de datos hacia MongoDB](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/07_WebScraping%20to%20PostgreSQL/NoticiasScraping.ipynb)
 
-### Analisis 
+### Analisis https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/07_WebScraping%20to%20PostgreSQL/NoticiasScraping.ipynb
 - Para el analisis  del dataset extraido mediante webscraping se utiliza herramientas que solo se relacionen con texto, ya que como el tema principal son noticias, es muy dificil poder ponderar estos datos y convertirlos en graficos estadisticos.
 ![image](https://user-images.githubusercontent.com/74793607/155899661-3e63dad8-e69f-4577-abc2-a9be8d27b290.png)
 
