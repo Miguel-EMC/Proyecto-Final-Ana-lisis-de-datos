@@ -172,11 +172,11 @@ except Exception as e:
     print(e)
 ```
 
-Puedes encontrar mucho más de cómo utilizar este script en [ARCHIVO ESTÁTICO A MYSQL](https://github.com/tu/proyecto/wiki)
-
 ![image](https://user-images.githubusercontent.com/74982150/155870977-b0c469a5-9d8e-4f3b-a454-8634b177adf5.png)
 
 ![image](https://user-images.githubusercontent.com/74982150/155870981-8567f4e5-61fe-419d-ba3b-c550f0a16c32.png)
+
+Puedes encontrar mucho más de cómo utilizar este script en [ARCHIVO ESTÁTICO A MYSQL](https://github.com/tu/proyecto/wiki)
 
 ---
 
@@ -251,6 +251,24 @@ def createDocsFromDF(documento, collection = None, insertToDB=False):
 ```
 
 Puedes encontrar mucho más de cómo utilizar este script en nuestra [MYSQL A MONGODB-ATLAS](https://github.com/tu/proyecto/wiki)
+
+--- 
+
+### ANÁLISIS EN POWERBI
+Se realizó en el análisis del tema seleccionado “personas desaparecidas”, analizando primero la cantidad de personas desaparecidas por provincia, destacando en ella que las principales provincias que tienen un mayor número de casos son las del Guayas y Pichincha, esto se debe a que son provincias muy pobladas y por ende el número siempre va a ser alto a diferencia de otras provincias, otro punto a destacar es la provincia de Galápagos, que al ser una zona netamente turística tiene un gran control por lo no tiene mucha probabilidad de que una persona se pierda.
+
+![image](https://user-images.githubusercontent.com/74982150/155871162-bdef92bf-0fd5-44d4-9056-879fb6ccecab.png)
+
+Tendremos un segundo análisis sobre la cantidad de personas desaparecidas, mediante su tipo de género, en este caso, tendremos una gran diferencia entre hombres y mujeres, siendo así la cantidad de mujeres que desaparecen superó por mas de un 50% a los hombres durante el año 2021 en todas las provincias del Ecuador, siguiendo con el análisis tendremos la fecha en la cuál las personas desaparecen igualmente por provincias, y por último tendremos la razón por la cuál se da esta situación, destacando dos que son las que tienen más porcentaje, estos serían problemas familiares y problemas sociales, seguidos de otro porcentaje alto en gente que no se pudo reportar el motivo. 
+
+![image](https://user-images.githubusercontent.com/74982150/155871184-daf57eec-c10e-4759-851c-370cf333bd9f.png)
+
+
+En conclusión las personas tienden a desaparecer por motivos financieros, problemas sociales pero principalmente por problemas familiares, dentro de estos casos tenemos que las mujeres suelen ser las que tienen una mayor taza de desaparición, por otro lado tenemos una gran cantidad de estas que han sido encontradas y es un punto positivo teniendo un porcentaje muy bajo en personas que aún no han sido encontradas y aún menor en personas fallecidas.
+
+![image](https://user-images.githubusercontent.com/74982150/155871191-548461b8-edb3-4390-a87b-9b2a0416b285.png)
+
+![image](https://user-images.githubusercontent.com/74982150/155871199-de41546a-ac27-49db-95d5-a4ef4de24128.png)
 
 
 ## Versionado 📌
