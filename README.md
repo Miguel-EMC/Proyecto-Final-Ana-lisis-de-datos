@@ -32,7 +32,7 @@ El equipo de trabajo para el proyecto denominado data lake el cual tiene como ob
 - [INEC to SQL Server](#INEC-to-SQL-Server)
 - [WebScraping to PostgreSQL](#WebScraping-to-PostgreSQL)
 - [Datos abiertos to MySQL](#Datos-abiertos-to-MySQL)
-- [Video de Youtube](#Video-de-Youtube)
+- [Video de Youtube](https://www.youtube.com/watch?v=yWNPFupdo_Q)
 
 ## Pre-requisitos 📋
 
