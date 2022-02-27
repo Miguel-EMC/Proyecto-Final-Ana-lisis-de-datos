@@ -249,11 +249,13 @@ En un análisis de las publicaciones que se realizaron durante un año en EEUU l
 
 ## INEC to SQL Server
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+Se debe descargar una base de datos sobre un tema libre en [INEC](https://www.ecuadorencifras.gob.ec/institucional/), ya sea en formato csv o json, para luego alamacenarlo en una base de datos
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+![image](https://user-images.githubusercontent.com/74844624/155895432-10fed1da-d4f3-4801-b677-29af0ae3ccc3.png)
+
+* [Importar un archivo CSV a SQL server](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
+* [Migrar un database en SQL server a MongoDB Atlas](https://maven.apache.org/) - Manejador de dependencias
+* [Analisis PowerBI](https://rometools.github.io/rome/) - Usado para generar RSS
 
 ## WebScraping to PostgreSQL
 
