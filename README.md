@@ -1020,7 +1020,7 @@ En conclusión las personas tienden a desaparecer por motivos financieros, probl
 
 ## Video de Youtube 📌
 
-En el siguiente enlace se podra visualizar todos los procedimiento que se realizo [SemVer](http://semver.org/)
+En el siguiente enlace se podra visualizar todos los procedimiento que se realizo [Video](https://www.youtube.com/watch?v=yWNPFupdo_Q)
 
 
 
