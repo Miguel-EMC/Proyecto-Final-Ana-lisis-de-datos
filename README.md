@@ -75,6 +75,7 @@ _Para poder desarrollar el proyecto es necesario instalar las bases de datos y u
 * [Analisis PowerBI]()
 
 
+---
 
 ## Webscraping to Neo4j
 
@@ -230,6 +231,8 @@ df.to_csv('Tema Libre.csv')
 
 Puedes encontrar mucho más de cómo utilizar este script en [Importar un archivo CSV a Neo4j](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/02_Webscraping%20to%20Neo4j/Temalibre.ipynb)
 
+---
+
 ### Envio de datos hacia MongoDB
 
 - Importar las librerías necesarias para establecer la conexión con Mongo DB y otras para enviar los datos 
@@ -299,6 +302,8 @@ for team in league.find_all('tbody'):
 - Se comprueba que los datos fueron recopilados exitosamente en la base de datos MongoDB.
 - ![image](https://user-images.githubusercontent.com/74793607/155898531-9889e6a7-32a4-44d3-af6d-155e3d8c4c22.png)
 Puedes encontrar mucho más de cómo utilizar este script en [Envio de datos hacia MongoDB](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/02_Webscraping%20to%20Neo4j/Temalibre.ipynb)
+
+---
 
 ### Analisis
 -	Para el analisis se utiliza la herrmienta Power  Bi que nos permite realizar graficos dependiendo del tipo de datos que deseemos analizar. Para este ejemplo vamos a analizar las estadisticas de cada pokemon, realizando graficos que relacionen el nombre, tipo y todas las estadisticas. Utilizando diferentes filtros como por categoria, por rango o por tipo se puede obtener muchas conclusiones, desde cual es el atributo mas fuerte de una clase en especifico, hasta una comparacion entre todos los atributos mediante un grafico de barras entre los pokemons escogidos.
