@@ -249,13 +249,162 @@ En un análisis de las publicaciones que se realizaron durante un año en EEUU l
 
 ## INEC to SQL Server
 
+* [Importar un archivo CSV a SQL server](CSV-a-SQL-server)
+* [Migrar un database en SQL server a MongoDB Atlas](SQL-server-a-MongoDB-Atlas)
+* [Analisis PowerBI](Analisis-PowerBI)
+
 Se debe descargar una base de datos sobre un tema libre en [INEC](https://www.ecuadorencifras.gob.ec/institucional/), ya sea en formato csv o json, para luego alamacenarlo en una base de datos
 
 ![image](https://user-images.githubusercontent.com/74844624/155895432-10fed1da-d4f3-4801-b677-29af0ae3ccc3.png)
 
-* [Importar un archivo CSV a SQL server](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Migrar un database en SQL server a MongoDB Atlas](https://maven.apache.org/) - Manejador de dependencias
-* [Analisis PowerBI](https://rometools.github.io/rome/) - Usado para generar RSS
+---
+
+### CSV-a-SQL-server
+
+- Procedimiento 
+
+Para crear un script el cual va a cargar un archivo csv a una base de datos en SQL server se debe instalar pip install pypyodbc el cual es una libreria para poder realizar una conexion con el servidor.
+
+```py
+pip install pypyodbc
+```
+
+Luego se debe importar las librerías de csv, psycopg2, pandas y las extensiones de la librería de psycopg2, estas librerías nos ayudaran a visualizar los datos que vamos a enviar a la base de datos.
+
+```py
+import pypyodbc as odbc
+import pandas as pd
+import pyodbc
+```
+
+Luego de se debera leer el archivo que se quiere importar a la base de datos, por lo cual se crea una varible y con ayuda de la libreria pandas de lee el documento convirtiendolo en una dataframe.
+
+```py
+datos = pd.read_csv('D:\Miguel\Documents\Analisis\Bases de datos_Proyecto\INEC\estudiantes.csv', encoding='latin1', sep=',')
+df = pd.DataFrame(datos)
+```
+
+Para realizar una conexion con el servidor se debe crear una variable en el cual se debe colocar el Drive, server en el cual se debe colocar segun los datos de nuestro servidor, luego se debe colocar a la base de datos creada posteriormente, y finalmente truted_connection, luego para tener una conexion directa con la tabla se crea una variable denominada cursor.
+
+```py
+#Conectar con el servidor SQL SERVER
+conn = pyodbc.connect('Driver={SQL Server};'
+                      'Server=DESKTOP-QTJIJML;'
+                      'Database=ESTUDIANTE;'
+                      'Trusted_Connection=yes;')
+
+cursor = conn.cursor()
+```
+
+Gracias al cursor, esto nos permitira tener una relacion directa con el servidor por lo cual nos va a permitir crear tablas e ingresar datos, ademas es importe conocer todas las columnas que tiene el documento csv y colocar la llave primaria.
+
+```py
+cursor.execute('''
+	   CREATE TABLE estudiantes (
+	    Provincia varchar(50),
+            Canton varchar(50),
+            Parroquia varchar(50),
+            Femenino varchar(50),
+            Masculino varchar(50),
+            Textbox17 varchar(50),
+            Textbox6 varchar(50),
+            Textbox7 varchar(50),
+            Textbox18 varchar(50),
+	    id int primary key
+			)
+               ''')
+```
+
+Mediante un for con un contador row se podra ir ingresando cada dato a las columnas que se creo posteriormente y con el conn.commit() se enviara todos los datos ingresados.
+```py
+for row in df.itertuples():
+   
+                 doc={}
+                 doc['Provincia']=row[0],
+                 doc['Canton']=row[1],
+                 doc['Parroquia']=row[2],
+                 doc['Femenino']=row[3],
+                 doc['Masculino']=row[4],
+                 doc['Textbox17']=row[5],
+                 doc['Textbox6']=row[6],
+                 doc['Textbox7']=row[7],
+                 doc['Textbox18']=row[8],
+		 doc['id']=row[9]
+		 conn.commit()
+```
+
+Puedes encontrar mucho más de cómo utilizar este script en [CSV-a-SQL-server](https://github.com/tu/proyecto/wiki)
+
+--- 
+
+### SQL-server-a-MongoDB-Atlas
+
+Para realizar una migracion de una base de datos de SQL-SERVER a MongoDB Atlas se debe importar las siguientes librerias las cual nos va a poder ayudar a conectar con los servidores. 
+
+```py
+import pyodbc
+import sqlite3 as sq
+from pymongo import MongoClient
+```
+
+Lo primero es establecer las conexiones con los servidores, primero es conectarse con SQL server y es importante seleccionar el nombre de la base de datos para que sea transferida de forma directa al MongoAtlas.
+
+```py
+#Conectar con el servidor SQL SERVER
+conn = pyodbc.connect('Driver={SQL Server};'
+                      'Server=DESKTOP-QTJIJML;'
+                      'Database=estudiantes;'
+                      'Trusted_Connection=yes;')
+
+cursor = conn.cursor()
+```
+
+Se bebe crear una variable en el cual debe contener un cursor directamente desde la conexion de SQL server, una vez realizado la conexion con el servidor con el lenguaje en SQL se crea una variable en el cual se selecciona la tabla de la base de datos y finalemente con una variable se alamacena.
+```py
+mycursor = conn.cursor()
+mysql = "SELECT * FROM estudiantes"
+mycursor.execute(mysql)
+myresult = mycursor.fetchall()
+```
+
+Se declara una variavle en el cual va a conetener el url de la conexion a mongoDB, luego se crea una base de datos y despues una nueva coleccion.
+```py
+client = MongoClient("mongodb+srv://miguel:miguel@cluster0.ed8kj.mongodb.net/test")
+
+DBS = client.get_database('estudiantes')
+db = DBS.sql
+```
+
+Mediante un for y con un contador se debe colocar el nombre de todas las colummnas que van hacer transferidas, y con try  - except se verificara si cada una de las filas y columnas son alamcenadas con exito en MongoDB Atlas
+
+```py
+for row in myresult:
+    doc={}
+    doc['Provincia']=row[0],
+    doc['Canton']=row[1],
+    doc['Parroquia']=row[2],
+    doc['Femenino']=row[3],
+    doc['Masculino']=row[4],
+    doc['Textbox17']=row[5],
+    doc['Textbox6']=row[6],
+    doc['Textbox7']=row[7],
+    doc['Textbox18']=row[8],
+    try:
+       print(doc)
+       db.insert_one(doc)
+       print("Migracion exitosa")
+    except Exception as ex:
+        print(ex)
+```
+Puedes encontrar mucho más de cómo utilizar este script en [SQL-server-a-MongoDB-Atlas](https://github.com/tu/proyecto/wiki)
+
+
+### Analisis PowerBI
+
+En el análisis de datos sobre los estudiantes de bachilleratos registrados en el periodo 2012 – 2013, se ha podido determinar que la mayoría de los estudiantes son de la provincia del Guayas donde también existe la mayoría de la población en la provincia, después le sigue la provincia de pichincha y donde existe una menor cantidad de estudiantes de igual manera son en las provincias menos pobladas que lo es galápagos y las provincias de la amazonia.
+
+![image](https://user-images.githubusercontent.com/74844624/155896381-e63a4613-5db6-44f3-8685-680e32e5dc3c.png)
+
 
 ## WebScraping to PostgreSQL
 
