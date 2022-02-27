@@ -4,10 +4,10 @@
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* - [Dustin Chávez](https://github.com/Dustinouwu)
-* **Steven Guañuna** - [villanuevand](https://github.com/Dustinouwu)
-* **Miguel Muzo** - [villanuevand](https://github.com/Dustinouwu)
-* **Kevin Pinanjota** - [villanuevand](https://github.com/Dustinouwu)
+- [Dustin Chávez](https://github.com/Dustinouwu)
+- [Steven Guañuna](https://github.com/Dustinouwu)
+- [Miguel Muzo](https://github.com/Dustinouwu)
+- [Kevin Pinanjota](https://github.com/Dustinouwu)
 
 --- 
 
@@ -259,6 +259,11 @@ def createDocsFromDF(documento, collection = None, insertToDB=False):
         cole.insert_one(docs)
     print("guardado exitosamente")    
     return docs 
+```
+
+
+```py
+createDocsFromDF(documento)
 ```
 
 Puedes encontrar mucho más de cómo utilizar este script en nuestra [MYSQL A MONGODB-ATLAS](https://github.com/tu/proyecto/wiki)
