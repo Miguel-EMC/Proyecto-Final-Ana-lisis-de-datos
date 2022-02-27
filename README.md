@@ -181,7 +181,7 @@ except Exception as ex:
     print(ex)
 ```
 
-Puedes encontrar mucho más de cómo utilizar este script en [Arhivo csv to MYSQL](https://github.com/tu/proyecto/wiki)
+Puedes encontrar mucho más de cómo utilizar este script en [Arhivo csv to MYSQL](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/05_Kaggle%20to%20MySQL/MYSQL.ipynb)
 
 ---
 ### Migración de MySQL To MongoDB
@@ -255,7 +255,7 @@ for row in myresult:
         print(ex)
 ```
 
-Puedes encontrar mucho más de cómo utilizar este script en [MYSQL to MongoDB Atlas](https://github.com/tu/proyecto/wiki)
+Puedes encontrar mucho más de cómo utilizar este script en [MYSQL to MongoDB Atlas](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/05_Kaggle%20to%20MySQL/MYSQL_TO_MONGODB.ipynb)
 
 ---
 
