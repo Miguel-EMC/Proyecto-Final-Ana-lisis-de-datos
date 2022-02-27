@@ -2,7 +2,7 @@
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+_Tdoso los colaboradores del proyecto desde sus inicios son: _
 
 - [Dustin Chávez](https://github.com/Dustinouwu)
 - [Steven Guañuna](https://github.com/Dustinouwu)
