@@ -5,7 +5,7 @@
 _Todos los colaboradores del proyecto desde sus inicios son:_
 
 - [Dustin Chávez](https://github.com/Dustinouwu)
-- [Steven Guañuna](https://github.com/Dustinouwu)
+- [Steven Guañuna](https://github.com/Seknys)
 - [Miguel Muzo](https://github.com/Miguel-EMC)
 - [Kevin Pinanjota](https://github.com/Dustinouwu)
 
