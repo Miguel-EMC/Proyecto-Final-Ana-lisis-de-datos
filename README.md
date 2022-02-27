@@ -7,6 +7,27 @@ El equipo de trabajo para el proyecto denominado data lake el cual tiene como ob
 ---
 ## Content 🚀
 - [Pre-requisitos](#Pre-requisitos)
+	- [In Terminal](#in-terminal)
+	    - [Terminal Examples](https://github.com/drawrowfly/tiktok-scraper/tree/master/examples/CLI/Examples.md)
+	    - [Manage Download History](https://github.com/drawrowfly/tiktok-scraper/tree/master/examples/CLI/DownloadHistory.md)
+	    - [Scrape and Download in Batch](https://github.com/drawrowfly/tiktok-scraper/tree/master/examples/CLI/BatchDownload.md)
+	    - [Output File Example](#output-file-example)
+	- [Docker](#docker)
+	    - [Build](#build)
+	    - [Run](#run)
+	- [Module](#docker)
+	    - [Methods](#methods)
+	    - [Options](#options)
+	    - [Use with Promises](#promise)
+	    - [Use with Events](#event)
+	    - [How to get/set session value](#get-set-session)
+	    - [How to access/download video](#download-video)
+	    - [Output Example](#json-output-example)
+	        - [Video Feed Methods](#video-feed)
+	        - [getUserProfileInfo](#getUserProfileInfo)
+	        - [getHashtagInfo](#getHashtagInfo)
+	        - [getVideoMeta](#getVideoMeta)
+            - [getMusicInfo](#getMusicInfo)
 - [Twitter To CouchDB](#features)
 - [Webscraping to Neo4j](#to-do)
 - [Facebook to CouchDB](#contribution)
@@ -23,11 +44,11 @@ _Para poder desarrollar el proyecto es necesario instalar las bases de datos y u
 
 ## Bases SQL 
 
--Mysql: Una de las bases de datos más utilizadas de código abierto, para entornos de desarrollo web.  
+- Mysql: Una de las bases de datos más utilizadas de código abierto, para entornos de desarrollo web.  
 
--Sql lite: Sistema gestor de base de datos relacional, relativamente pequeña y además de código abierto. 
+- Sql lite: Sistema gestor de base de datos relacional, relativamente pequeña y además de código abierto. 
 
--Sql server: El lenguaje de desarrollo utilizado es Transact-SQL, una implementación del estándar ANSI del lenguaje SQL, utilizado para manipular y recuperar datos, tablas y definir relaciones entre ellas. 
+- Sql server: El lenguaje de desarrollo utilizado es Transact-SQL, una implementación del estándar ANSI del lenguaje SQL, utilizado para manipular y recuperar datos, tablas y definir relaciones entre ellas. 
 
 
  ## Bases NO SQL 
