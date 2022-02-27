@@ -115,7 +115,7 @@ Extraeremos el archivo estático desde la página del gobierno “DATOS ABIERTOS
 
 Importaremos algunas librerías para poder realizar tanto la conexión para la base de datos MYSQL y poder leer el archivo que vamos a extraer de las páginas de archivos estáticos.
 
-```sh
+```py
 import mysql.connector as msql
 import pandas as pd
 from sqlalchemy import create_engine
