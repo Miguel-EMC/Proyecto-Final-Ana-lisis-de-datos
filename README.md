@@ -135,6 +135,46 @@ if connections.is_connected():
 else:
     print("Conexión Rechazada")
 ```
+
+Con la variable antes mencionada, crearemos mediante lenguaje SQL, una nueva base de datos dentro de MYSQL con la siguiente línea:
+
+```py
+cursor.execute("CREATE DATABASE PersonasPerdidas;")
+```
+
+Crearemos una consulta para poder demostrar que la base de datos “PersonasPerdidas” se haya creado dentro de la base de datos de MYSQL.
+
+```py
+consulta = pd.read_sql("show databases;",connections)
+consulta
+```
+
+Estableceremos la conexión hacia MYSQL desde Python, añadiendo el usuario, contraseña y por ultimo la base de datos que vamos a utilizar en este caso “PersonasPerdidas”
+
+```py
+engine = create_engine('mysql+mysqldb://root:123456@localhost:3306/PersonasPerdidas')
+consulta
+```
+
+Cargaremos a la variable “df” gracias a la librería de pandas, el documento que extrajimos de la página de archivos estáticos mediante la extensión csv, también para poder leer este archivo hemos necesitado declarar el tipo de separador que utiliza nuestro archivo, caso contrario las columnas al momento de extraer se unen, adicionalmente utilizaremos ecoding para poder leer este archivo y para que no existan errores dentro de la lectura del archivo.
+
+```py
+df = pd.read_csv("mdg_personasdesaparecidas_pm_2021_enero_diciembre.csv", sep=";" ,encoding='latin-1')
+```
+
+Como último paso, añadiremos la variable que ya contiene el archivo, crearemos la tabla que va ir en la base de datos, en este caso con el nombre de “información”, añadiremos la conexión previamente creada y pasaremos toda la información del archivo CSV  a la base de datos de MYSQL.
+
+```py
+try:
+    df .to_sql('información', con=engine, if_exists = 'replace', index = False)
+    print("creación y almacenamiento completados")
+except Exception as e:
+    print(e)
+```
+![image](https://user-images.githubusercontent.com/74982150/155870977-b0c469a5-9d8e-4f3b-a454-8634b177adf5.png)
+
+![image](https://user-images.githubusercontent.com/74982150/155870981-8567f4e5-61fe-419d-ba3b-c550f0a16c32.png)
+
 Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
 
 ## Versionado 📌
