@@ -2,9 +2,13 @@
 
 _El equipo de trabajo para el proyecto denominado data lake el cual tiene como objetivo la recolección de datos y evaluación para poder determinar varias conclusiones._
 
-## Comenzando 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+---
+## Content 🚀
+- [Features](#features)
+- [To Do](#to-do)
+- [Contribution](#contribution)
+- [Installation](#installation)
+- [Usage](#usage)
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
