@@ -268,6 +268,43 @@ def createDocsFromDF(documento, collection = None, insertToDB=False):
 createDocsFromDF(documento)
 ```
 
+```py
+guardado exitosamente
+Output exceeds the size limit. Open the full output data in a text editor
+
+[{'Provincia': 'PICHINCHA',
+  'Latitud': '-0,156852339',
+  'Longitud': '-78,47783944',
+  'Edad Aprox.': 29,
+  'Sexo': 'HOMBRE',
+  'Motivo Desaparción': 'PROBLEMAS SOCIALES',
+  'Motivo Desaparción Obs.': 'INFLUENCIA DE AMISTADES',
+  'Fecha Desaparición': '6/8/2021',
+  'Situación Actual': 'ENCONTRADO',
+  'Fecha Localización': '8/8/2021',
+  '_id': ObjectId('621713c7f07d4a11cc5add7e')},
+ {'Provincia': 'MORONA SANTIAGO',
+  'Latitud': '-2,0021974',
+  'Longitud': '-77,9967043',
+  'Edad Aprox.': 15,
+  'Sexo': 'MUJER',
+  'Motivo Desaparción': 'PROBLEMAS SOCIALES',
+  'Motivo Desaparción Obs.': 'INFLUENCIA DE AMISTADES',
+  'Fecha Desaparición': '15/7/2021',
+  'Situación Actual': 'ENCONTRADO',
+  'Fecha Localización': '9/8/2021',
+  '_id': ObjectId('621713c7f07d4a11cc5add7f')},
+ {'Provincia': 'AZUAY',
+  'Latitud': '-2,882362',
+  'Longitud': '-79,0589399',
+  'Motivo Desaparción Obs.': 'FAMILIA DISFUNSIONAL',
+  'Fecha Desaparición': '13/6/2021',
+  'Situación Actual': 'ENCONTRADO',
+  'Fecha Localización': '16/6/2021',
+  '_id': ObjectId('621713c7f07d4a11cc5ae165')},
+ ...]
+```
+
 Puedes encontrar mucho más de cómo utilizar este script en nuestra [MYSQL A MONGODB-ATLAS](https://github.com/tu/proyecto/wiki)
 
 --- 
