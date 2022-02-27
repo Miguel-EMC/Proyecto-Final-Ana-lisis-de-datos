@@ -353,7 +353,7 @@ for row in df.itertuples():
 		 conn.commit()
 ```
 
-Puedes encontrar mucho más de cómo utilizar este script en [CSV-a-SQL-server](https://github.com/tu/proyecto/wiki)
+Puedes encontrar mucho más de cómo utilizar este script en [CSV-a-SQL-server](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/06_INEC%20to%20SQL%20Server/IMPORT_TO_SQLSERVER.ipynb)
 
 --- 
 
@@ -416,7 +416,7 @@ for row in myresult:
     except Exception as ex:
         print(ex)
 ```
-Puedes encontrar mucho más de cómo utilizar este script en [SQL-server-a-MongoDB-Atlas](https://github.com/tu/proyecto/wiki)
+Puedes encontrar mucho más de cómo utilizar este script en [SQL-server-a-MongoDB-Atlas](https://github.com/Miguel-EMC/Proyecto-Final-Analisis-de-datos/blob/main/06_INEC%20to%20SQL%20Server/SQL_SERVER_TO_MONGO.ipynb)
 
 
 ### Analisis PowerBI
