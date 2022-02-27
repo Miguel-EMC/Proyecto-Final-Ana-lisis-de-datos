@@ -36,7 +36,7 @@ En el siguiente enlace se podra visualizar todos los procedimiento que se realiz
 - [INEC to SQL Server](#INEC-to-SQL-Server)
 - [WebScraping to PostgreSQL](#WebScraping-to-PostgreSQL)
 - [Datos abiertos to MySQL](#Datos-abiertos-to-MySQL)
-- [Video de Youtube](https://www.youtube.com/watch?v=yWNPFupdo_Q)
+
 
 ## Pre-requisitos 📋
 
