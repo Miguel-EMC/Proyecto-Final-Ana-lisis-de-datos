@@ -70,9 +70,9 @@ _Para poder desarrollar el proyecto es necesario instalar las bases de datos y u
 
 ## Twitter To CouchDB
 
-* [Importar un archivo CSV a CocuhDB]()
-* [Migrar un database en CouchDB a MongoDB Atlas]()
-* [Analisis PowerBI]()
+* Importar un archivo CSV a CocuhDB
+* Migrar un database en CouchDB a MongoDB Atlas
+* Analisis PowerBI
 
 ![image](https://user-images.githubusercontent.com/74762981/156109950-6d96ef51-809a-49cf-bc25-b0786f572fa1.png)
 
@@ -170,9 +170,9 @@ de varios paises ,para ingresar en el filtro a buscar.
 
 ---
 
-* [Importar un archivo CSV a Neo4j]()
-* [Envio de datos hacia MongoDB]()
-* [Analisis PowerBI]()
+* Importar un archivo CSV a Neo4j
+* Envio de datos hacia MongoDB
+* Analisis PowerBI
 
 Importar las librerías (neo4j) necesarias para establecer la conexión con la base de datos y tambien las librerías de BeautifulSoup para realizar la extracción de datos mediante Web Scraping
 
@@ -421,9 +421,9 @@ El atributo mas alto de los pokemons que tienen un total (sumatoria de todas las
 
 ---
 
-* [Importar un archivo CSV a CouchDB]()
-* [Migrar un database en CouchDB a MongoDB Atlas]()
-* [Analisis PowerBI]()
+* Importar un archivo CSV a CouchDB]()
+* Migrar un database en CouchDB a MongoDB Atlas
+* Analisis PowerBI
 
 ![image](https://user-images.githubusercontent.com/74762981/156117215-bb32cc5f-4b4f-43e9-bd5c-157c4768fb09.png)
 
@@ -519,8 +519,8 @@ ______________________________________________
 ## Twitter to MongoDB
 
 ---
-* [Importar un archivo CSV a MongoDB]()
-* [Analisis PowerBI]()
+* Importar un archivo CSV a MongoDB
+* Analisis PowerBI
 
 - Importamos librerias de Twitter y mongoDb
 
@@ -587,9 +587,9 @@ y cuando realizaron publicacion del juego ingresado
 
 ---
 
-* [Importar un archivo CSV a MySQL]()
-* [Migrar un database en MySQL a MongoDB Atlas]()
-* [Analisis PowerBI]()
+* Importar un archivo CSV a MySQL
+* Migrar un database en MySQL a MongoDB Atlas
+* Analisis PowerBI
 
 Lo primero es descargar un documento csv o json de la pagina de [kaggle](https://www.kaggle.com/)
 
@@ -908,9 +908,9 @@ En el análisis de datos sobre los estudiantes de bachilleratos registrados en e
 
 ---
 
-* [Importar un archivo CSV a PostgreSQL]()
-* [Migrar un database en PostgreSQL a MongoDB Atlas]()
-* [Analisis PowerBI]()
+* Importar un archivo CSV a PostgreSQL
+* Migrar un database en PostgreSQL a MongoDB Atlas
+* Analisis PowerBI
 
 - Importar las librerías necesarias para establecer una conexión con la base PostgreSQL y las librerías de BeautifulSoup para extraer los datos de una pagina web
 ```py
@@ -1071,9 +1071,9 @@ Puedes encontrar mucho más de cómo utilizar este script en [Envio de datos hac
 
 ---
 
-* [Importar un archivo CSV a MySQL]()
-* [Migrar un database en MySQL a MongoDB Atlas]()
-* [Analisis PowerBI]()
+* Importar un archivo CSV a MySQL
+* Migrar un database en MySQL a MongoDB Atlas
+* Analisis PowerBI
 
 Extraeremos el archivo estático desde la página del gobierno “DATOS ABIERTOS”, específicamente el tema de “personas perdidas”. 
 [Datos abiertos](https://datosabiertos.gob.ec/)
